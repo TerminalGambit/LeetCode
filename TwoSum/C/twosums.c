@@ -8,9 +8,9 @@ use the same element twice.
 You can return the answer in any order.
 */
 
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+/*
+Note: The returned array must be malloced, assume caller calls free().
+*/
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     int *result = malloc(2 * sizeof(int));
