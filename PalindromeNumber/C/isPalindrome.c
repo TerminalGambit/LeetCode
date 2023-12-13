@@ -1,10 +1,11 @@
 /* Given an signed integer x, return true if x is a 
 palindrome, and false otherwise.
 */
+#include <stdio.h>
 
 int isPalindrome(int x) {
     if (x < 0) return 0;
-    int rev = 0, temp = x;
+    long rev = 0, temp = x;
     while (temp) {
         rev = rev * 10 + temp % 10;
         temp /= 10;
