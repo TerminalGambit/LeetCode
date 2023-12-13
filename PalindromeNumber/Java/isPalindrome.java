@@ -1,7 +1,7 @@
 /* Given an integer x, return true if x is a 
 palindrome, and false otherwise. */
 
-class Solution {
+class isPalindrome {
     public boolean isPalindrome(int x) {
         if(x < 0) return false;
         int temp = x;
@@ -12,4 +12,10 @@ class Solution {
         }
         return rev == x;
     }
+
+    public static void main(String[] args) {
+        isPalindrome obj = new isPalindrome();
+        System.out.println(obj.isPalindrome(121));
+    }
 }
+
