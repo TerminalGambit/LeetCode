@@ -7,8 +7,18 @@ class KthLargest:
         self.nums = nums
 
     def add(self, val: int) -> int:
-        self.nums.append(val)
-        self.nums.sort()
+        # self.nums.append(val)
+        # self.nums.sort()
+        # insert the element into the sorted list
+        # using binary search
+        left, right = 0, len(self.nums)
+        while left < right:
+            mid = (left + right) // 2
+            if self.nums[mid] < val:
+                right = mid
+            else:
+                left = mid + 1
+        self.nums.insert(left, val)
         return self.nums[-self.k]
 
 
